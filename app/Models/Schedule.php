@@ -9,4 +9,19 @@ class Schedule extends Model
 {
     /** @use HasFactory<\Database\Factories\ScheduleFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'description',
+        'start_time',
+        'end_time',
+        'user_id',
+    ];
+
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
+    }
+
+    
 }
