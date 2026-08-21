@@ -14,7 +14,8 @@ class Service extends Model
         'name',
         'description',
         'price',
-        'duration',
+        'duration_minutes',
+        'business_id'
     ];
 
     public function business()
